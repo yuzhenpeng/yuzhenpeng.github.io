@@ -1,0 +1,13 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: Akilarの糖果屋
+      link: https://akilarlxh.github.io/
+      avatar: https://jerryc.me/img/avatar.png
+      descr: Rookie programmer's growth diary
+    2:
+      name: 夢魘小棧
+      link: https://blog.ihoey.com
+      avatar: https://cdn.dode.top/avatar.png
+      descr: 心，若沒有棲息的地方，到哪裏都是流浪...... 
