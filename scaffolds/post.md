@@ -1,10 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags: []
+tags: 
 categories:
-keywords:
-description:
-top_img:
 cover:
 ---
