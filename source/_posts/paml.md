@@ -49,6 +49,9 @@ Welcome to the PAML discussion group.  This site is for posting questions and di
 蛋白编码基因（protein coding sequence）的自然选择压力水平可以通过dN/dS(ω)值的大小来衡量，其中，dS代表同义替换率（synonymous rate），dN代表非同义替换率（non-synonymous rate）。在没有受到选择压力时，同义替换率和非同义替换率相等，此时dN/dS = 1；当受到纯化选择压力作用时，自然选择会阻止氨基酸发生改变，同义替换率会大于非同义替换率，即dN/dS < 1;当受到正选择压力作用时，氨基酸的置换率会受自然选择的青睐，即dN/dS > 1。
 {% endblockquote%}
 
+**PAML简易流程**
+![](https://i.loli.net/2019/12/24/8PbAzm6ItoNR5Fq.png)
+
 ### 2. 如何运行PAML
 要正常运行paml软件，需要四个标准文件：
 1. **tree文件**：Newick格式的树文件，主要包括分析涉及物种的系统发生关系，物种名必须与序列比对里面的物种名保持一致，否则会报错。
@@ -56,7 +59,7 @@ Welcome to the PAML discussion group.  This site is for posting questions and di
 3. **codeml.ctl**：paml软件的参数控制文件，通过修改该文件参数，实现模型切换
 4. **codeml.exe**：该软件的可执行文件
 <div align=center>
-<img width =500 height =450 src="/PAML选择压力分析/20191224042205149.png" >
+<img width =80% height =80% src="https://i.loli.net/2019/12/24/1Ei4PAkdQW5hYKC.png" >
 </div>
 
 多序列比对与质量过滤在正选择分析以及系统发育研究中尤其重要，关乎到所有分析结果的正确与否。如何正确的处理编码序列，在之前的博文中已经详细说明，此处不在赘述。这里，主要强调一下控制文件的设置：
@@ -114,12 +117,75 @@ Orangutan:0.4, Gibbon:0.5);
 
 ### 3.PAML分析四大模型
 在paml分析里面，主要涉及四种模型：位点模型（site-model）、支模型（branch model）、支位点模型（branch site model）以及进化支模型。位点模型通常适用于检测某一支系普遍性、广泛性的正选择，这种正选择是由于位点持续改变所引起的，例如适应多种病原体；支模型主要是检测某一支系是否存在快速进化以及正选择，但却无法检测到正选择位点；支位点模型，相对比较准确与稳定，适用于检测某一支系断点性的正选择事件，此结果是由于适应某一时期环境改变所引起的，通常会保留在后代中；进化支模型（clade model），则主要是判别不同物种之间是否存受分化选择压力的作用。
-**1. 位点模型**
-M0：假设所有位点具有唯一的dN/dS值
-M1a：假设存在两类位点—纯化选择位点dN/dS < 1，中性进化位点dN/dS = 1
-M2a：假设存在三类位点——纯化选择位点dN/dS < 1，中性进化位点dN/dS = 1与正选择位点dN/dS > 1
+#### **1. 位点模型**
+**M0**：假设所有位点具有相同的dN/dS值；
+**M1a**：假设存在两类位点—保守位点0< dN/dS < 1，中性进化位点dN/dS = 1，并且估算这两类位点的比率（p0，p1）和ω值（ω0，ω1）；
+**M2a**：假设存在三类位点——纯化选择位点dN/dS < 1，中性进化位点dN/dS = 1与正选择位点dN/dS > 1，并估算三类位点的比率（p0，p1，p2）；
+**M3**: 离散模型，假设所有位点的ω值呈离散分布；
+**M7**：假设所有位点0 < ω <1且呈现beta分布；
+**M8**：在M7模型的基础上，增加一类正选择位点（ω >1 ）;
+**M8a**:与M8类似，只不过是将新增的ω固定为1；
 
-#### 3. 如何标记前景支
+**位点模型的Codeml.ctl参数设置：**
+```
+model = 0                 
+NSsites = 0 1 2 3 7 8
+即分别比较如下模型（* 为正选择模型，前提是需要LRTs显著）：
+M3 vs. M0
+M2a* vs. M1a
+M8* vs. M7
+M8* vs. M8a 
+```
+***
+#### 2.支模型
+**one rario**：假设所有的进化谱系都具有相同的ω值；
+**free ratio**：假设所有的支系都具有独立的ω值；
+**two ratio**：假设前景支与背景支的ω不同
+
+**分支模型的Codeml.ctl参数设置：**
+```
+two ratio: model = 2, NSsites = 0  
+one ratio: model = 0, NSsites = 0
+free ratio: model = 1, NSsites = 0
+                 
+one ratio vs. free ratio
+one ratio vs. two ratio
+```
+***
+#### 3.支位点模型
+假定位点间的ω值是变化的，同时也假定支系间的ω值是变化的。该模型主要用于检测前景支中正选择作用对部分位点的影响。
+**modelA null（零假设）**：ω值设定为固定值1
+**modelA（备择假设）**：估算其ω值是否大于1
+背景支与前景支具有相同的位点ω值：
+K0：前景支与背景支中的位点受到纯化选择0 < ω < 1；
+K1：前景支与背景支中的位点处于中性进化0 < ω = 1;
+背景支与前景支具有不同的位点ω值：
+K2a：前景支处于中性进化，而背景支处于纯化选择；
+K2b：前景支受到正选择压力（ ω>1 ），而背景支处于中性进化；
+**支位点模型的的Codeml.ctl参数设置：**
+```
+ModelA：
+fix_omega = 0   * 1: omega or omega_1 fixed, 0: estimate 
+      omega = 2   * initial or fixed omega, for codons or codon-transltd AAs
+ModelAnull：
+fix_omega = 1   * 1: omega or omega_1 fixed, 0: estimate 
+      omega = 1   * initial or fixed omega, for codons or codon-transltd AAs
+即比较如下模型（* 为正选择模型，前提是需要LRTs显著）：
+ModelA* vs. ModelAnull
+```
+***
+
+#### 4.进化支模型
+与枝位点模型类型，能同时检测多个进化枝（Clade），但是该模型并没有将背景支的dN/dS值约束在（0,1）。
+```
+M2a_model: model = 0 NSsites = 22
+Clade Model C: model = 3 NSsites = 2
+Clade Model D: model = 3 NSsites = 3
+Clade Model C vs. M2a_model
+```
+***
+
+### 3. 如何标记前景支
 对于一个大的树，你可能想标记一个进化枝内全部分枝。出于这个目的，你可以使用进化枝标签$。
 
 {% codeblock tree.nex%}
