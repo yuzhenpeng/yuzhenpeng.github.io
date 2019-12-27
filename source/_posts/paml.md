@@ -1,9 +1,9 @@
 ---
 title: PAML选择压力分析
 date: 2019-12-24 13:03:50
-tags: paml
-categories: software
-cover:
+tags: 选择压力检测
+categories: 生信分析
+cover: https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41559-019-0834-1/MediaObjects/41559_2019_834_Fig1_HTML.png
 ---
 {% blockquote Ziheng Yang，PAML: Phylogenetic Analysis by Maximum Likelihood %}
 >Hi PAML Users,
@@ -20,7 +20,7 @@ Welcome to the PAML discussion group.  This site is for posting questions and di
 
 ----
 
-### 参考链接
+## 参考链接
 
 [**PAML主页**](http://abacus.gene.ucl.ac.uk/software/paml.html)
 [**PAML手册**](http://abacus.gene.ucl.ac.uk/software/pamlDOC.pdf)
@@ -34,7 +34,7 @@ Welcome to the PAML discussion group.  This site is for posting questions and di
 
 ---
 
-### 1. PAML可以做什么？
+## 1. PAML可以做什么？
 
 - **系统发育树的检验与比较**；
 - **复杂替代模型中参数的估计**；
@@ -50,9 +50,9 @@ Welcome to the PAML discussion group.  This site is for posting questions and di
 {% endblockquote%}
 
 **PAML简易流程**
-![](https://i.loli.net/2019/12/24/8PbAzm6ItoNR5Fq.png)
+![图片引自高芳銮老师课件](https://i.loli.net/2019/12/24/8PbAzm6ItoNR5Fq.png)
 
-### 2. 如何运行PAML
+## 2. 如何运行PAML
 要正常运行paml软件，需要四个标准文件：
 1. **tree文件**：Newick格式的树文件，主要包括分析涉及物种的系统发生关系，物种名必须与序列比对里面的物种名保持一致，否则会报错。
 2. **fasta**文件：fasta格式的多序列比对文件，通过要经过mafft、prank等软件进行比对，在经过gblocks、trimal等质量过滤软件处理后获得。
@@ -115,9 +115,9 @@ Orangutan:0.4, Gibbon:0.5);
 {%endcodeblock%}
 需要注意的是，Newick格式的树尾部一定要有分号，没有的话程序可能不能正常运行。
 
-### 3.PAML分析四大模型
+## 3.PAML分析四大模型
 在paml分析里面，主要涉及四种模型：位点模型（site-model）、支模型（branch model）、支位点模型（branch site model）以及进化支模型。位点模型通常适用于检测某一支系普遍性、广泛性的正选择，这种正选择是由于位点持续改变所引起的，例如适应多种病原体；支模型主要是检测某一支系是否存在快速进化以及正选择，但却无法检测到正选择位点；支位点模型，相对比较准确与稳定，适用于检测某一支系断点性的正选择事件，此结果是由于适应某一时期环境改变所引起的，通常会保留在后代中；进化支模型（clade model），则主要是判别不同物种之间是否存受分化选择压力的作用。
-#### **1. 位点模型**
+### **1. 位点模型**
 **M0**：假设所有位点具有相同的dN/dS值；
 **M1a**：假设存在两类位点—保守位点0< dN/dS < 1，中性进化位点dN/dS = 1，并且估算这两类位点的比率（p0，p1）和ω值（ω0，ω1）；
 **M2a**：假设存在三类位点——纯化选择位点dN/dS < 1，中性进化位点dN/dS = 1与正选择位点dN/dS > 1，并估算三类位点的比率（p0，p1，p2）；
@@ -137,7 +137,7 @@ M8* vs. M7
 M8* vs. M8a 
 ```
 ***
-#### 2.支模型
+### 2.支模型
 **one rario**：假设所有的进化谱系都具有相同的ω值；
 **free ratio**：假设所有的支系都具有独立的ω值；
 **two ratio**：假设前景支与背景支的ω不同
@@ -152,7 +152,7 @@ one ratio vs. free ratio
 one ratio vs. two ratio
 ```
 ***
-#### 3.支位点模型
+### 3.支位点模型
 假定位点间的ω值是变化的，同时也假定支系间的ω值是变化的。该模型主要用于检测前景支中正选择作用对部分位点的影响。
 **modelA null（零假设）**：ω值设定为固定值1
 **modelA（备择假设）**：估算其ω值是否大于1
@@ -165,17 +165,15 @@ K2b：前景支受到正选择压力（ ω>1 ），而背景支处于中性进�
 **支位点模型的的Codeml.ctl参数设置：**
 ```
 ModelA：
-fix_omega = 0   * 1: omega or omega_1 fixed, 0: estimate 
-      omega = 2   * initial or fixed omega, for codons or codon-transltd AAs
+model = 2, NSsites = 2, fix_omega = 0, omega = 1.5
 ModelAnull：
-fix_omega = 1   * 1: omega or omega_1 fixed, 0: estimate 
-      omega = 1   * initial or fixed omega, for codons or codon-transltd AAs
+model = 2, NSsites = 2, fix_omega = 1, omega = 1
 即比较如下模型（* 为正选择模型，前提是需要LRTs显著）：
 ModelA* vs. ModelAnull
 ```
 ***
 
-#### 4.进化支模型
+### 4.进化支模型
 与枝位点模型类型，能同时检测多个进化枝（Clade），但是该模型并没有将背景支的dN/dS值约束在（0,1）。
 ```
 M2a_model: model = 0 NSsites = 22
@@ -184,11 +182,40 @@ Clade Model D: model = 3 NSsites = 3
 Clade Model C vs. M2a_model
 ```
 ***
+## 4.PAML FAQ
+#### 1. 有根树与无根树
+简单的区别方法就是，有根树的祖先节点是二叉树，而无根树为三叉树，举个例子：
+{% codeblock lang:bash %}
+((1,2),3);   # 有根树
+(1,2,3);  #无根树
+(((1,2),3),4);  # 有根树
+((1,2),3,4);  #无根树
+(1,2,(3,4));  #无根树
+{% endcodeblock %}
+在使用codeml时，如果没有指定有根树参数却使用了有根树作为输入，那么在输出结果中将会得到这样的报错信息："This is a rooted tree. Please check!"。对于大多数模型，即使使用有根树，其该模型似然值仍然是正确的，但是root周围两个分支的长度不稳定，因为它们的和是估计值。对于其他模型，似然估计和参数估计都是不正确的。**因此，分析时确实应该注意到这一信息，并尽可能使用一棵无根树。**我们可以使用R包**ape**将有根树转换为无根树：
+{% codeblock lang:R ape%}
+setwd("C:/Users/lenovo/Desktop/")
+library(ape)
+tr <- read.tree("tree.txt")
+unrooted_tr <- unroot(tr)
+write.tree(unrooted_tr, "tree_unrooted.txt")
+# 如果你有多个树需要转换，可以使用lapply函数操作
+write.tree(lapply(trees, unroot), "trees_unrooted.tr")
+{%endcodeblock%}
 
-### 3. 如何标记前景支
+#### 2.是否删除多序列比对中的gap与模糊字符
+在多序列比对过程中，对齐gap是极其困难的，paml软件包没有办法无法处理gap。因此，我们可以通过设置cleandata = 1来去除gap；此外，还可以将gap当作为模糊字符进行处理。但是，这都不是最好的解决办法，一个明显的影响是这两种策略都低估了序列差异。**就个人而言，我认为除了一个或两个序列之外，大多数序列都有数据的位点也许应该保留，而除了一个或两个序列之外，所有序列都有对齐间隙的位点最好被移除。所以选择合适的多序列比对软件以及过滤软件，尤其重要。**
+
+#### 3.当前景支的dN/dS值显著大于背景支时，该如何解释
+如果检测前景支时，其dN/dS > 1时，我们可以认为它受到正选择作用。但是，如果其dN/dS <1但大于背景支时，就不能认为它是受正选择作用的，选择压力约束放松可能是较为合理的解释。此外，在Ohta's的微有害突变假说下，净化选择在大种群中比在小种群中更有效，因此不同谱系的种群规模的差异提供了另一个相容的假设。如果氨基酸的变化是稍微有害的，我们预计在大群体中它们从群体中移除的速度会比在小群体中更高。因此，即使两系在选择压力或基因功能上没有差异，我们也期望在一个大群体中看到一个较小的DN/DS比值，例如，许多核基因的DN/DS比值在啮齿类动物中低于灵长类或偶蹄类。
+
+#### 4.不同的模型鉴定出不同的位点，该选择相信哪一种模型？
+通常，如果一个位点在一种模型下出现在列表中，那么在另一种模型下也会有相当大的概率。如果你以这种方式看待它们，结果可能没有太大不同。确定位点的问题很困难，而且容易出错。这种情况类似于从一个班级中得到排名前几的学生。列表包含的内容越多，质量就越差。因此，我们通常会认为后验概率大于95%或者99%的位点，是比较可信的。
+
+
+### 1. 如何标记前景支
 对于一个大的树，你可能想标记一个进化枝内全部分枝。出于这个目的，你可以使用进化枝标签$。
-
-{% codeblock tree.nex%}
+{% codeblock tree.nex lang:java%}
 (((rabbit, rat) $1, human), goat_cow, marsupial)
 (((rabbit #1, rat #1) #1, human), goat_cow, marsupial)
 {% endcodeblock %}
@@ -221,8 +248,8 @@ Clade Model C vs. M2a_model
 https://groups.google.com/forum/#!topic/pamlsoftware/5-5EfkSOFAo
 某一基因，在脊椎动物祖先发生了基因复制，然后分化为A，B两个不同支系。其中，在谱系A中GC含量较低，而在谱系B中含量较高。通过正选择检测，发现在谱系A的祖先，哺乳动物祖先以及任何一个谱系B中均发现了正选择信号，有没有必要对第三位密码子进行饱和性检验。
 
-####6. ω = 999
-遇到这种极大值的dN/dS时，首先要确保你的序列是否正确；其次，该位置的dn，ds是否远小于0.0001；最后，如果这两个情况都没问题，那么ω=999也是正常的。[杨子恒](https://groups.google.com/forum/#!topic/pamlsoftware/GIa9N8kAmd0)教授给予了回答，我们应该关注于[LRT检验](https://groups.google.com/forum/#!topic/pamlsoftware/qbuHiE3Ef2Q)。
+####6. dN/dS（ω）值过大，结果是否可信？
+遇到这种极大值的dN/dS时，比如ω = 999，首先要确保你的序列是否正确；其次，该位置的dn，ds是否远小于0.0001，枝长是否过小。显然，高度相似的序列和非常发散的序列都不是信息丰富的，很难指定确切的值。如果这两个情况都没问题，那么ω=999也是正常的。[杨子恒](https://groups.google.com/forum/#!topic/pamlsoftware/GIa9N8kAmd0)教授给予了回答，我们应该关注于[LRT检验](https://groups.google.com/forum/#!topic/pamlsoftware/qbuHiE3Ef2Q)。为了避免此类问题的出现，我们可以先通过M0模型（NSsites = 0, model = 0, method = 1）获得枝长，，然后将具有分支长度的树从M0输出文件复制到树文件中，并在ctl中设置FIX_blength=2。
 
 ####7. 支模型中的正选择分支在分支站点模型中也应该是正选择的
 如果two-ratio模型显著优于one-ratio模型，此外还要用two-ratio与null-two-ratio进行显著性比较（fix_omega = 1 omega = 1）。[详细介绍](https://groups.google.com/forum/#!topic/pamlsoftware/naxp6R1Xe7M)

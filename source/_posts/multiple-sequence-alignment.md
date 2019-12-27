@@ -1,9 +1,10 @@
 ---
 title: multiple sequence alignment
 date: 2019-11-29 16:17:55
-tags: 序列比对
+tags: 多序列比对
 categories: 生信分析
 comments: true
+cover: https://upload-images.jianshu.io/upload_images/8553338-8ebb1797e4a5dea4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
 ---
 >前几天，实验室的师弟师妹通过本地blast获取一些没有基因组注释物种的蛋白编码序列。原本以为可以快速地进行下一步的选择压力分析，没想到却在多序列比对这一环节出现了棘手的问题。以前，我都是经过PRANK软件进行多序列比对，然后再使用Gblocks软件对数据进行过滤的。现在，由于师弟师妹在拼接CDS序列时，有些碱基并不是保留3的倍数，造成很多编码序列出现移码突变，甚至变成了伪假基因（几百个基因）。虽然，现在可以进行多序列比对的软件有很多，比如Muscle、MAFFT、PRANK等，但它们均不能解决移码突变的问题。于是，我开始去google搜寻解决方案。功夫不负有心人，我最终找到了完美的解决办法，收获颇丰，所以把这个过程记录下来。
 
