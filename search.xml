@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>基因组水平检测趋同进化</title>
-      <link href="2021/04/11/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B0%B4%E5%B9%B3%E6%A3%80%E6%B5%8B%E5%88%86%E5%AD%90%E8%B6%8B%E5%90%8C%E8%BF%9B%E5%8C%96%E4%BF%A1%E5%8F%B7/"/>
-      <url>2021/04/11/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B0%B4%E5%B9%B3%E6%A3%80%E6%B5%8B%E5%88%86%E5%AD%90%E8%B6%8B%E5%90%8C%E8%BF%9B%E5%8C%96%E4%BF%A1%E5%8F%B7/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>趋同进化，是指亲缘关系较远的两个或多个类群由于长期处于相似的生活环境，受到相似的选择压力的影响从而进化出相似的功能或表型特征。例如，鸟类与蝙蝠为了适应飞行进化出相似的翅膀，鲨鱼与鲸类为了适应水生生活进化出流线型体型。</p></blockquote><hr><p><img alt="Fig 1" data-src="https://upload-images.jianshu.io/upload_images/8553338-0df44fdde817f881.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"><br><img alt="Fig 2" data-src="https://upload-images.jianshu.io/upload_images/8553338-0158bdd41ad7d5ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p><p><strong>趋同表型进化</strong>，为研究基因组<strong>如何编码表型</strong>以及<strong>量化进化的可重复性</strong>提供了独特的机会。解决这个问题通常会对具有共享相似表型的物种进行基因组测序，然后与不同表型的物种进行比较基因组学分析。然后，推断出在表型趋同进化的那些分支上特异性地核苷酸或者氨基酸位点替换，从而将<strong>基因进化</strong>与<strong>表型改变</strong>相关联。</p><p>通过近期大量地阅读文献，了解到目前可以通过从多个层面去揭示趋同进化的发生。</p><ol><li><p>基于系统发生推断，如Parker et al.(2013)研究了与哺乳动物回声定位进化相关的趋同进化，结果发现它们在鲸类中进化过一次，而在蝙蝠中进化过一次或两次。他们主要利用一种基于拓扑结构的方法，在近200个基因中发现了大量的趋同替换。<img alt="Fig 3" data-src="https://upload-images.jianshu.io/upload_images/8553338-7efe0176ee02f14a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li><li><p>基于特异地氨基酸位点替换，Zhang and Kumar,1997. (Foote et al., 2015; Thomas and Hahn, 2015; Zou and Zhang, 2015b)。尤其是，Foote et al. (2015) 发现了海洋哺乳动物在适应水生环境生活的趋同进化。<img alt="Fig 4" data-src="https://upload-images.jianshu.io/upload_images/8553338-50090af6561e648c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li></ol><ol start="3"><li><p>基于氨基酸性质的转变，Rey et al. (2018)研究认为特异氨基酸位点的替换仅仅是趋同进化的子集，而通过检测氨基酸性质的转变能够发现更多的趋同进化信号。<img alt="Fig 5" data-src="https://upload-images.jianshu.io/upload_images/8553338-bf30f4a6645ea783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li><li><p>基于正选择基因富集通路水平，Sun at al. (2018)对沙蜥属以及倭蛙属高原适应相关的正选择基因进行了比较基因组学分析，结果发现尽管两栖类和爬行类分化久远，但它们依然在氧化应激，低氧应答通路上表现出趋同性，也进一步表明<strong>高原适应性的趋同进化更多地体现在功能上的趋同</strong>，而非特定的基因。<img alt="Fig 6" data-src="https://upload-images.jianshu.io/upload_images/8553338-e27565e98eb446c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li><li>基于基因进化速率，Chikina at al. (2016)认为据，对于趋同氨基酸的蛋白质组范围的检索效率较低，并且观察到的趋同变化可以通过不依赖于自适应驱动的趋同的<strong>中性模型</strong>来充分解释。因此，他们采用了一种新的分析流程，该流程侧重于那些在其整个基因进化速率中表现出趋同加速或减速的基因。<img alt="Fig 7" data-src="https://upload-images.jianshu.io/upload_images/8553338-30450a1dff74359e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></li></ol><p><strong>通过以上几种方法，可以看出趋同进化也是一个复杂的科学问题。为了更好地解决此问题，我们往往需要考虑问题的全面性。比如，趋同进化也可以由中性选择驱动，那么该如何确定适应性地趋同进化？此外，我们还要结合自己的数据，选取合适的方法来降低趋同进化检测的假阳性。如果有条件的话，实验证据也是必不可少的。</strong></p><p>由于测序技术的发展，目前有大约190个哺乳动物被测序。现在趋同进化往往是基于基因组水平分析，所以从进化速率并结合氨基酸位点检测的分析流程，是我个人比较青睐的。现将主要的分析步骤简要说明，列举如下：</p><p>a. 利用PAML软件包中aaml模型获取全基因组每个基因的进化速率。</p><p>b. 通过投影算子法，计算相对进化速率（基于标准化的全基因组进化速率）；识别出趋同表型进化枝系相对进化速率较高或较低的基因。<strong>（要进行非参数检验，秩和检验，看P值是否显著）</strong></p><p>c. 同时也要设置姊妹群作为对照组，然后观测实验组与对照组之间是否具有显著差异。<strong>（Kolmogorov-Smirnov test，q值校正）</strong></p><p>d. 考虑一下，加速进化或减速进化是否与其他表型因素相关。</p><p>e. 加速进化是由于适应性进化还是选择约束放松引起的。主要通过PAML软件中的三个模型检测完成，M1 vs BS1（位点模型与枝位点模型的零假设进行统计比较），若拒绝M1，接受BS1，则是由于选择约束放松引起的。BS1 vs BS2（枝位点模型零假设与备择假设），若拒绝BS1，接受BS2，则是由于适应性进化引起的。（正选择是否是这些趋同表型进化物种所特有）</p><p>f.  最后，还要检测一下在这些相对进化速率趋同的基因，是否存在趋同氨基酸位点的替换。</p><p>参考文献：<br>Parker J, Tsagkogeorga G, Cotton JA, Liu Y, Provero P, Stupka E, Rossiter SJ. 2013. Genome-wide signatures of convergent evolution in echolocating mammals. Nature 502(7470):228–231.</p><p>Foote, A. D., Liu, Y., Thomas, G. W., Vinař, T., Alföldi, J., Deng, J., … &amp; Khan, Z. (2015). Convergent evolution of the genomes of marine mammals. Nature genetics, 47(3), 272.</p><p>Rey, C., Guéguen, L., Sémon, M., &amp; Boussau, B. (2018). Accurate detection of convergent amino-acid evolution with PCOC. Molecular biology and evolution, 35(9), 2296-2306.</p><p>Sun, Y. B., Fu, T. T., Jin, J. Q., Murphy, R. W., Hillis, D. M., Zhang, Y. P., &amp; Che, J. (2018). Species groups distributed across elevational gradients reveal convergent and continuous genetic adaptation to high elevations. Proceedings of the National Academy of Sciences, 115(45), E10634-E10641.</p><p>Chikina, M., Robinson, J. D., &amp; Clark, N. L. (2016). Hundreds of genes experienced convergent shifts in selective pressure in marine mammals. Molecular biology and evolution, 33(9), 2182-2192.</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 生信分析 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 趋同进化 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>比较转录组揭示长寿老人自噬-溶酶体功能增强</title>
       <link href="2021/04/11/%E8%BD%AC%E5%BD%95%E7%BB%84%E8%AF%81%E6%8D%AE%E6%98%BE%E7%A4%BA%E7%99%BE%E5%B2%81%E8%80%81%E4%BA%BA%E7%9A%84%E8%87%AA%E5%99%AC%E6%BA%B6%E9%85%B6%E4%BD%93%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/"/>
       <url>2021/04/11/%E8%BD%AC%E5%BD%95%E7%BB%84%E8%AF%81%E6%8D%AE%E6%98%BE%E7%A4%BA%E7%99%BE%E5%B2%81%E8%80%81%E4%BA%BA%E7%9A%84%E8%87%AA%E5%99%AC%E6%BA%B6%E9%85%B6%E4%BD%93%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA/</url>
@@ -46,6 +21,31 @@
         <tags>
             
             <tag> 长寿 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>基因组水平检测趋同进化</title>
+      <link href="2021/04/11/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B0%B4%E5%B9%B3%E6%A3%80%E6%B5%8B%E5%88%86%E5%AD%90%E8%B6%8B%E5%90%8C%E8%BF%9B%E5%8C%96%E4%BF%A1%E5%8F%B7/"/>
+      <url>2021/04/11/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B0%B4%E5%B9%B3%E6%A3%80%E6%B5%8B%E5%88%86%E5%AD%90%E8%B6%8B%E5%90%8C%E8%BF%9B%E5%8C%96%E4%BF%A1%E5%8F%B7/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>趋同进化，是指亲缘关系较远的两个或多个类群由于长期处于相似的生活环境，受到相似的选择压力的影响从而进化出相似的功能或表型特征。例如，鸟类与蝙蝠为了适应飞行进化出相似的翅膀，鲨鱼与鲸类为了适应水生生活进化出流线型体型。</p></blockquote><hr><p><img alt="Fig 1" data-src="https://upload-images.jianshu.io/upload_images/8553338-0df44fdde817f881.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"><br><img alt="Fig 2" data-src="https://upload-images.jianshu.io/upload_images/8553338-0158bdd41ad7d5ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p><p><strong>趋同表型进化</strong>，为研究基因组<strong>如何编码表型</strong>以及<strong>量化进化的可重复性</strong>提供了独特的机会。解决这个问题通常会对具有共享相似表型的物种进行基因组测序，然后与不同表型的物种进行比较基因组学分析。然后，推断出在表型趋同进化的那些分支上特异性地核苷酸或者氨基酸位点替换，从而将<strong>基因进化</strong>与<strong>表型改变</strong>相关联。</p><p>通过近期大量地阅读文献，了解到目前可以通过从多个层面去揭示趋同进化的发生。</p><ol><li><p>基于系统发生推断，如Parker et al.(2013)研究了与哺乳动物回声定位进化相关的趋同进化，结果发现它们在鲸类中进化过一次，而在蝙蝠中进化过一次或两次。他们主要利用一种基于拓扑结构的方法，在近200个基因中发现了大量的趋同替换。<img alt="Fig 3" data-src="https://upload-images.jianshu.io/upload_images/8553338-7efe0176ee02f14a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li><li><p>基于特异地氨基酸位点替换，Zhang and Kumar,1997. (Foote et al., 2015; Thomas and Hahn, 2015; Zou and Zhang, 2015b)。尤其是，Foote et al. (2015) 发现了海洋哺乳动物在适应水生环境生活的趋同进化。<img alt="Fig 4" data-src="https://upload-images.jianshu.io/upload_images/8553338-50090af6561e648c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li></ol><ol start="3"><li><p>基于氨基酸性质的转变，Rey et al. (2018)研究认为特异氨基酸位点的替换仅仅是趋同进化的子集，而通过检测氨基酸性质的转变能够发现更多的趋同进化信号。<img alt="Fig 5" data-src="https://upload-images.jianshu.io/upload_images/8553338-bf30f4a6645ea783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li><li><p>基于正选择基因富集通路水平，Sun at al. (2018)对沙蜥属以及倭蛙属高原适应相关的正选择基因进行了比较基因组学分析，结果发现尽管两栖类和爬行类分化久远，但它们依然在氧化应激，低氧应答通路上表现出趋同性，也进一步表明<strong>高原适应性的趋同进化更多地体现在功能上的趋同</strong>，而非特定的基因。<img alt="Fig 6" data-src="https://upload-images.jianshu.io/upload_images/8553338-e27565e98eb446c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></p></li><li>基于基因进化速率，Chikina at al. (2016)认为据，对于趋同氨基酸的蛋白质组范围的检索效率较低，并且观察到的趋同变化可以通过不依赖于自适应驱动的趋同的<strong>中性模型</strong>来充分解释。因此，他们采用了一种新的分析流程，该流程侧重于那些在其整个基因进化速率中表现出趋同加速或减速的基因。<img alt="Fig 7" data-src="https://upload-images.jianshu.io/upload_images/8553338-30450a1dff74359e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="lazyload"></li></ol><p><strong>通过以上几种方法，可以看出趋同进化也是一个复杂的科学问题。为了更好地解决此问题，我们往往需要考虑问题的全面性。比如，趋同进化也可以由中性选择驱动，那么该如何确定适应性地趋同进化？此外，我们还要结合自己的数据，选取合适的方法来降低趋同进化检测的假阳性。如果有条件的话，实验证据也是必不可少的。</strong></p><p>由于测序技术的发展，目前有大约190个哺乳动物被测序。现在趋同进化往往是基于基因组水平分析，所以从进化速率并结合氨基酸位点检测的分析流程，是我个人比较青睐的。现将主要的分析步骤简要说明，列举如下：</p><p>a. 利用PAML软件包中aaml模型获取全基因组每个基因的进化速率。</p><p>b. 通过投影算子法，计算相对进化速率（基于标准化的全基因组进化速率）；识别出趋同表型进化枝系相对进化速率较高或较低的基因。<strong>（要进行非参数检验，秩和检验，看P值是否显著）</strong></p><p>c. 同时也要设置姊妹群作为对照组，然后观测实验组与对照组之间是否具有显著差异。<strong>（Kolmogorov-Smirnov test，q值校正）</strong></p><p>d. 考虑一下，加速进化或减速进化是否与其他表型因素相关。</p><p>e. 加速进化是由于适应性进化还是选择约束放松引起的。主要通过PAML软件中的三个模型检测完成，M1 vs BS1（位点模型与枝位点模型的零假设进行统计比较），若拒绝M1，接受BS1，则是由于选择约束放松引起的。BS1 vs BS2（枝位点模型零假设与备择假设），若拒绝BS1，接受BS2，则是由于适应性进化引起的。（正选择是否是这些趋同表型进化物种所特有）</p><p>f.  最后，还要检测一下在这些相对进化速率趋同的基因，是否存在趋同氨基酸位点的替换。</p><p>参考文献：<br>Parker J, Tsagkogeorga G, Cotton JA, Liu Y, Provero P, Stupka E, Rossiter SJ. 2013. Genome-wide signatures of convergent evolution in echolocating mammals. Nature 502(7470):228–231.</p><p>Foote, A. D., Liu, Y., Thomas, G. W., Vinař, T., Alföldi, J., Deng, J., … &amp; Khan, Z. (2015). Convergent evolution of the genomes of marine mammals. Nature genetics, 47(3), 272.</p><p>Rey, C., Guéguen, L., Sémon, M., &amp; Boussau, B. (2018). Accurate detection of convergent amino-acid evolution with PCOC. Molecular biology and evolution, 35(9), 2296-2306.</p><p>Sun, Y. B., Fu, T. T., Jin, J. Q., Murphy, R. W., Hillis, D. M., Zhang, Y. P., &amp; Che, J. (2018). Species groups distributed across elevational gradients reveal convergent and continuous genetic adaptation to high elevations. Proceedings of the National Academy of Sciences, 115(45), E10634-E10641.</p><p>Chikina, M., Robinson, J. D., &amp; Clark, N. L. (2016). Hundreds of genes experienced convergent shifts in selective pressure in marine mammals. Molecular biology and evolution, 33(9), 2182-2192.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生信分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 趋同进化 </tag>
             
         </tags>
       
